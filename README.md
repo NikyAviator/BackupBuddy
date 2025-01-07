@@ -16,6 +16,7 @@ For this to make sense we will use my structure and the types of files I am inte
 4. [Manual Mounting a USB Stick](#manual-mounting-a-usb-stick)
 5. [Common Issues and Fixes](#common-issues-and-fixes)
 6. [Save Directory Tree](#save-directory-tree)
+7. [Analyze the File Types](#analyze-the-file-types)
 
 ---
 
@@ -148,4 +149,33 @@ Kill any processes using the device before unmounting.
 
 ```bash
 tree -a > ~/usb_structure.txt
+```
+
+- `-a`: Includes hidden files and directories.
+- The output will be saved to `~/usb_structure.txt`.
+
+2. Verify the saved file:
+
+```bash
+less ~/usb_structure.txt
+```
+
+---
+
+### Analyze the File Types
+
+1. Count file types on the USB stick:
+
+```bash
+find . -type f | awk -F. '{print $NF}' | sort | uniq -c | sort -nr
+```
+
+This will give you a list of file extensions and their counts:
+
+```
+15 jpg
+10 png
+ 5 txt
+ 2 pdf
+ 1 conf
 ```
