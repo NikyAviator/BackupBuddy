@@ -96,3 +96,31 @@ sudo umount /mnt/usb
 ```
 
 ---
+
+### Common Issues and Fixes
+
+1. **Error: "Mount: only root can do that":**
+
+- Use `sudo` to run the `mount` command as an administrator.
+
+2. **Error: "No such device":**
+
+- Ensure you are using the correct device name (e.g., `/dev/sdc1`) from the `lsblk` output.
+
+3. **Permission Denied:**
+
+- Change ownership of the mount directory:
+
+```bash
+sudo chown $USER:$USER /mnt/usb
+```
+
+4. **Unmount Fails:**
+
+- If you encounter an error unmounting the device, ensure no processes are accessing the USB stick:
+
+```bash
+lsof /mnt/usb
+```
+
+---
