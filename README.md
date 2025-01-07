@@ -12,7 +12,7 @@ For this to make sense we will use my structure and the types of files I am inte
 
 1. [Dependencies](#dependencies)
 2. [Install on Linux](#install-on-linux)
-3. [Generate Directory Tree](#generate-directory-tree)
+3. [Regarding Mounting and Dismounting](#regarding-mounting-and-dismounting)
 4. [Manual Mounting a USB Stick](#manual-mounting-a-usb-stick)
 5. [Common Issues and Fixes](#common-issues-and-fixes)
 6. [Save Directory Tree](#save-directory-tree)
@@ -45,9 +45,7 @@ sudo apt install rsync tree
 
 ---
 
-### Generate Directory Tree
-
-Once tree is installed, we can create a structured view of your USB contents:
+### Regarding Mounting and Dismounting
 
 **1. Mount your USB Stick:**
 
@@ -143,3 +141,11 @@ Kill any processes using the device before unmounting.
 ---
 
 ### Save Directory Tree
+
+1. Generate a tree structure of the USB contents and save it to a file:
+
+- `cd` where your USB is mounted and type:
+
+```bash
+tree -a > ~/usb_structure.txt
+```
