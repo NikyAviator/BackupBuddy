@@ -17,6 +17,7 @@ For this to make sense we will use my structure and the types of files I am inte
 5. [Common Issues and Fixes](#common-issues-and-fixes)
 6. [Save Directory Tree](#save-directory-tree)
 7. [Analyze the File Types](#analyze-the-file-types)
+8. [Backup Key Findings](#backup-key-findings)
 
 ---
 
@@ -193,3 +194,21 @@ Example output:
 .vimrc
 .config/kde-settings.conf
 ```
+
+---
+
+### Backup Key Findings
+
+1. Save the list of dotfiles to a separate file:
+
+```bash
+find . -type f -name ".*" > ~/usb_dotfiles.txt
+```
+
+2. Save the file type analysis to another file:
+
+```bash
+find . -type f | awk -F. '{print $NF}' | sort | uniq -c | sort -nr > ~/usb_file_types.txt
+```
+
+---
