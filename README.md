@@ -8,6 +8,17 @@ For this to make sense we will use my structure and the types of files I am inte
 
 ---
 
+## Table of Contents
+
+1. [Dependencies](#dependencies)
+2. [Install on Linux](#install-on-linux)
+3. [Generate Directory Tree](#generate-directory-tree)
+4. [Manual Mounting a USB Stick](#manual-mounting-a-usb-stick)
+5. [Common Issues and Fixes](#common-issues-and-fixes)
+6. [Save Directory Tree](#save-directory-tree)
+
+---
+
 ### Dependencies
 
 1. **tree**: To analyze USB file structure
@@ -130,3 +141,5 @@ Kill any processes using the device before unmounting.
 `lsof` is a powerful Linux command used to list open files and the processes using them. Since in Linux, "everything is a file" (including directories, devices, and sockets), this command can also show processes accessing files on a mounted device like your USB stick.
 
 ---
+
+### Save Directory Tree
