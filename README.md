@@ -34,7 +34,7 @@ sudo apt install rsync tree
 
 ---
 
-## Generate Directory Tree
+### Generate Directory Tree
 
 Once tree is installed, we can create a structured view of your USB contents:
 
@@ -55,3 +55,11 @@ sdc           8:32   1  14,5G  0 disk
 ```
 
 In this example, the USB partition is `/dev/sdc1`.
+
+2. **Create a Mount Point**: Create a directory to mount the USB stick:
+
+```bash
+mkdir -p /mnt/usb
+```
+
+3. **Mount the USB Stick**: Use the `mount` command to manually mount the USB stick to the directory you just created:
