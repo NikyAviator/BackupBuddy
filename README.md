@@ -179,3 +179,17 @@ This will give you a list of file extensions and their counts:
  2 pdf
  1 conf
 ```
+
+2. List all `.dotfiles` (hidden configuration files):
+
+```bash
+find . -type f -name ".*"
+```
+
+Example output:
+
+```
+.bashrc
+.vimrc
+.config/kde-settings.conf
+```
