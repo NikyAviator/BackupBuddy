@@ -63,3 +63,36 @@ mkdir -p /mnt/usb
 ```
 
 3. **Mount the USB Stick**: Use the `mount` command to manually mount the USB stick to the directory you just created:
+
+```bash
+sudo mount /dev/sdc1 /mnt/usb
+```
+
+4. **Verify the Mount:** Check if the USB stick is mounted:
+
+```bash
+lsblk
+```
+
+You should see the mount point listed under the **MOUNTPOINTS** column:
+
+```graphql
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sdc           8:32   1  14,5G  0 disk
+└─sdc1        8:33   1  14,5G  0 part /mnt/usb
+```
+
+5. **Access the USB Contents:** Navigate to the USB stick's directory:
+
+```bash
+cd /mnt/usb
+ls -lah
+```
+
+6. **Unmount the USB Stick (When Finished):** After you’re done working with the USB stick, unmount it to safely remove it:
+
+```bash
+sudo umount /mnt/usb
+```
+
+---
