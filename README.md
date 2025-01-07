@@ -123,4 +123,10 @@ sudo chown $USER:$USER /mnt/usb
 lsof /mnt/usb
 ```
 
+Kill any processes using the device before unmounting.
+
+**What `lsof /mnt/usb` Does:**
+
+`lsof` is a powerful Linux command used to list open files and the processes using them. Since in Linux, "everything is a file" (including directories, devices, and sockets), this command can also show processes accessing files on a mounted device like your USB stick.
+
 ---
