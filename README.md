@@ -38,4 +38,20 @@ sudo apt install rsync tree
 
 Once tree is installed, we can create a structured view of your USB contents:
 
----
+**1. Mount your USB Stick:**
+
+- Identify the USB device:
+
+```bash
+lsblk
+```
+
+Example output:
+
+```graphql
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sdc           8:32   1  14,5G  0 disk
+└─sdc1        8:33   1  14,5G  0 part
+```
+
+In this example, the USB partition is `/dev/sdc1`.
